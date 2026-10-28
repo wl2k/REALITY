@@ -19,7 +19,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/xtls/reality/fips140tls"
+	"github.com/wl2k/reality/fips140tls"
 )
 
 // serverHandshakeState contains details of a server handshake in progress.
@@ -999,7 +999,7 @@ func (c *Conn) processCertsFromClient(certificate Certificate) error {
 			err := errors.New("client's certificate is not allowed in FIPS 140-3 mode")
 			return &CertificateVerificationError{UnverifiedCertificates: certs, Err: err}
 		}
-		
+
 		switch certs[0].PublicKey.(type) {
 		case *ecdsa.PublicKey, *rsa.PublicKey, ed25519.PublicKey:
 		case *mldsa.PublicKey:

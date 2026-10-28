@@ -14,7 +14,7 @@ import (
 	"hash"
 	"io"
 
-	"github.com/xtls/reality/tls13"
+	"github.com/wl2k/reality/tls13"
 )
 
 // This file contains the functions necessary to compute the TLS 1.3 key
@@ -207,7 +207,7 @@ func (ke *hybridKeyExchange) keyShares(rand io.Reader) (*keySharePrivateKeys, []
 	if err != nil {
 		return nil, nil, err
 	}
-    priv.mlkem, err = ke.mlkemGenerateKey()
+	priv.mlkem, err = ke.mlkemGenerateKey()
 	if err != nil {
 		return nil, nil, err
 	}

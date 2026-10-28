@@ -1,0 +1,14 @@
+name: Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: WaterLemons2k/scheduled-workflow-activity-action@v2
+      - uses: tgymnich/fork-sync@v2
+        with:
+          auto_merge: false

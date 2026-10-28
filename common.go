@@ -30,7 +30,7 @@ import (
 	"time"
 	_ "unsafe" // for linkname
 
-	"github.com/xtls/reality/fips140tls"
+	"github.com/wl2k/reality/fips140tls"
 )
 
 const (

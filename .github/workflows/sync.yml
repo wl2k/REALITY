@@ -1,6 +1,7 @@
 name: Sync
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
 
@@ -12,3 +13,5 @@ jobs:
       - uses: tgymnich/fork-sync@v2
         with:
           auto_merge: false
+          base: main
+          head: main
